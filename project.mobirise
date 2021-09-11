@@ -55,11 +55,12 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
-        "meta_descr": "",
+        "title": "Brass Band of Northern Virginia",
+        "meta_descr": "The Brass Band of Northern Virginia was founded in November 2019 by a group of friends who shared a passion for British-style brass band music and a desire to grow an active and sustainable organization.",
         "header_custom": "",
         "footer_custom": "",
-        "html_before": ""
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/bbnv%20splash-1080x1080.png"
       },
       "components": [
         {
