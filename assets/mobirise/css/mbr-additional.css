@@ -1301,11 +1301,11 @@ a {
 .cid-sIFc3sjQ3c {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #cef1cd;
+  background-color: #cbddea;
 }
 .cid-sIFc3sjQ3c .mbr-overlay {
   padding: 0;
-  background: #cbffb4;
+  background: #ddd0be;
   opacity: 1;
   transform: scale(3) skewX(25deg);
   transform-origin: left bottom;
@@ -1512,7 +1512,7 @@ a {
   transform: translateY(-50%);
   left: 0;
   margin-left: 50px;
-  color: #c17b71;
+  color: #ddd0be;
   opacity: 1;
 }
 .cid-sIF8GA5R15 .carousel-control.carousel-control-next {
