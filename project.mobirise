@@ -47,7 +47,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 10,
+    "uniqCompNum": 11,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -563,6 +563,57 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              ".mbr-overlay when (@twoBgColor)": {
+                "padding": "0",
+                "background": "@twoColor",
+                "opacity": "1",
+                "transform": "scale(3) skewX(25deg)",
+                "transform-origin": "left bottom",
+                "left": "-100%"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "letter-spacing": "3.27px !important",
+              "color": "#6a3649",
+              "text-align": "center"
+            },
+            ".title-text": {
+              "color": "#231f59",
+              "text-align": "center"
+            },
+            "H5": {
+              "color": "#4c4a4b",
+              "text-align": "center"
+            },
+            ".section-text, .mbr-section-btn": {
+              "text-align": "center",
+              "color": "#4c4a4b"
+            }
+          },
+          "_name": "content1",
+          "_sourceTheme": "spiritm4",
+          "_customHTML": "<section class=\"content1\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"mobirise-icons2\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"7\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"7\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"5\" max=\"12\" value=\"6\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n         <input type=\"checkbox\" title=\"Subtitle\" name=\"Subtitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Button\" name=\"showButton\">\n         <header>Background</header>\n         <fieldset type=\"background\" name=\"bg\" parallax>\n                <input type=\"image\" title=\"Background Image\" value=\"../_images/022.jpg\" parallax>\n                <input type=\"color\" title=\"Background Color\" value=\"#f2f1eb\" selected>\n         </fieldset>\n            <input type=\"checkbox\" title=\"2 Background Color\" name=\"twoBgColor\" condition=\"bg.type == 'color'\" checked> \n            <input type=\"range\" inline title=\"Width 2 Bg\" name=\"width2Bg\" min=\"1\" max=\"6\" step=\"1\" value=\"3\" condition=\"twoBgColor && bg.type == 'color'\">   \n            <input type=\"color\" title=\"2 Color\" name=\"twoColor\" value=\"#e9ddd8\" condition=\"twoBgColor && bg.type == 'color'\">  \n            <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n            <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f2f1eb\" condition=\"overlay && bg.type !== 'color'\">\n            <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type !== 'color') || (twoBgColor && bg.type == 'color')\" mbr-class=\"{'col-md-4': width2Bg == 1 && twoBgColor && bg.type == 'color',\n                     'col-md-5': width2Bg == 2 && twoBgColor && bg.type == 'color',\n                     'col-md-6': width2Bg == 3 && twoBgColor && bg.type == 'color',\n                     'col-md-7': width2Bg == 4 && twoBgColor && bg.type == 'color',\n                     'col-md-8': width2Bg == 5 && twoBgColor && bg.type == 'color',\n                     'col-md-9': width2Bg == 6 && twoBgColor && bg.type == 'color'}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                     <h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-4 mt-4\" mbr-theme-style=\"display-4\" mbr-if=\"Subtitle\" data-app-selector=\".mbr-section-subtitle\">September 25th 2021 5:pm&nbsp; WWII Memeorial</h5>\n                     <h4 class=\"mbr-fonts-style title-text align-center mbr-regular mb-4\" mbr-theme-style=\"display-5\" data-app-selector=\".title-text\" mbr-if=\"showTitle\"> Unbreakable</h4>\n                     <h5 class=\"mbr-fonts-style align-center section-text mb-4 mbr-regular\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".section-text, .mbr-section-btn\">Join us for a Covid-save concert featuring cutting edge music from modern composers.  The Brass Band of Northern Virginia is dedicated to giving deep musical experiences and emotionally fulfilling content.  Our 30 member ensemble is staffed by professional, freelance, or retired military musicians. Our goal is to elevate brass band music to the same artistic level as the symphony orchestra. Our first concert this season will be at the WWII monument on the DC mall.  All of the works on the concert stems from the theme: that together we are unbreakable!<div>Strike Up the Band</div><div><br></div><div>Jubilee Overture</div><div><br></div><div>Adagio for Strings</div><div><br></div><div>Resugam</div><div><br></div><div>Men of Harlich</div><div><br></div><div>Canterbury Chorale</div><div><br></div><div>Fenetico</div><div><br></div><div>You’ll Never Walk Alone</div><div><br></div><div>Pastime with Good Company</div><div><br></div><div>Amazing Grace</div><div><br></div><div>Pines of Rome</div></h5>\n                     <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-center\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButton\"><a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">CREATE YOUR OWN WEBSITE</a></div>\n                    </div>\n           </div>\n    </div>\n</section>",
+          "_cid": "sJ8eLoOiie",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-a"
         },
         {
           "alias": false,
